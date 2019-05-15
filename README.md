@@ -1,6 +1,7 @@
 # xxl-job-docker
 
 init 目录中会存放 xxl-job 的初始化数据库, 原始路径是 https://github.com/xuxueli/xxl-job/blob/master/doc/db/tables_xxl_job.sql
+> 在 `tables_xxl_job.sql` 的第一行请加入 `SET NAMES utf8mb4;`, 避免中文乱码
 
 > docker-compose 中的默认绑定宿主机端口是 28888
 

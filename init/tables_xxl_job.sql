@@ -1,3 +1,4 @@
+SET NAMES utf8mb4;
 CREATE database if NOT EXISTS `xxl-job` default character set utf8 collate utf8_general_ci;
 use `xxl-job`;
 

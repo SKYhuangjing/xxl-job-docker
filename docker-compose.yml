@@ -17,6 +17,10 @@ services:
     environment:
       MYSQL_DATABASE: xxl-job
       MYSQL_ROOT_PASSWORD: 123456 #root管理员用户密码
+    command: [
+      '--character-set-server=utf8mb4',
+      '--collation-server=utf8mb4_unicode_ci'
+    ]
     networks:
       - xxl_job_net
 
@@ -32,7 +36,7 @@ services:
     volumes:
       - "./tmp:/data/applogs"
     environment:
-      - spring.datasource.url=jdbc:mysql://mysql:3306/xxl-job?Unicode=true&characterEncoding=UTF-8
+      - spring.datasource.url=jdbc:mysql://mysql:3306/xxl-job?Unicode=true&characterEncoding=UTF-8&autoReconnect=true
       - spring.datasource.password=123456
     depends_on: 
       - mysql
